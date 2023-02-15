@@ -16,4 +16,10 @@ public class AddTest {
         assertEquals(4,add.addtwo(2,2));
     }
 
+    @Test
+    @DisplayName("2 + 2 + 2 = 6")
+    void addingThreeNumbers(){
+        assertEquals(6, add.addThree(2,2,2));
+    }
+
 }
