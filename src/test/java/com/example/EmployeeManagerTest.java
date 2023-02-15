@@ -35,6 +35,14 @@ public class EmployeeManagerTest {
 
     }
 
+    @Test
+    @DisplayName("Check if there is employees in list")
+    void checkIfThereIsAnyEmployeesInList(){
+        when(employeeRepository.findAll()).thenReturn(employees);
+        assertEquals(2,employeeRepository.findAll().size());
+    }
+
+
 
 
 }
