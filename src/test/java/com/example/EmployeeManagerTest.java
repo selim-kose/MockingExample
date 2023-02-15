@@ -42,6 +42,20 @@ public class EmployeeManagerTest {
         assertEquals(2,employeeRepository.findAll().size());
     }
 
+    @Test
+    @DisplayName("Check if pay method works")
+    public void payEmployeesShouldFailBecauseNoEmployees() {
+        when(employeeRepository.findAll()).thenReturn(employees);
+
+        assertEquals(2, employeeManager.payEmployees());
+    }
+
+    @Test
+    @Disabled
+    void fail() {
+        fail();
+    }
+
 
 
 
